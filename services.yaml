@@ -1,0 +1,80 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services
+
+- System:
+    - Unraid dashboard:
+        href: https://{{HOMEPAGE_VAR_MAIN_SUBDOMAIN}}.{{HOMEPAGE_VAR_TAILSCALE_DOMAIN}}/Dashboard
+        description: Unraid Dashboard
+    - Tailscale Admin:
+        href: https://login.tailscale.com/admin/machines
+        description: Tailscale Network Management
+    - Authelia:
+        href: https://{{HOMEPAGE_VAR_MAIN_SUBDOMAIN}}.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}:9091/
+        description: Single sign-on and authentication gateway
+
+- Media:
+    - gFlix:
+        href: https://gflix.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: Your personal media streaming server
+    - Movies (Radarr):
+        href: https://movies.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: Movie collection management tool
+    - Shows (Sonarr):
+        href: https://shows.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: TV show collection management tool
+    - Indexer (Prowlarr):
+        href: https://prowlarr.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: Indexer manager for your media tools
+    - Bazarr:
+        href: https://subtitles.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: Manage subtitles for your media library
+    - Jellyseerr:
+        href: https://{{HOMEPAGE_VAR_MAIN_SUBDOMAIN}}.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}:5055/
+        description: Manage media requests for Jellyfin
+    - TinyMediaManager:
+        href: https://tmm.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: Metadata manager for media libraries
+
+- Utilities:
+    - Calibre:
+        href: https://books.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: E-book library management software
+    - Code-Server:
+        href: https://code.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: Visual Studio Code on the web
+    - DupeGuru:
+        href: https://{{HOMEPAGE_VAR_MAIN_SUBDOMAIN}}.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}:7801/
+        description: Find and manage duplicate files
+    - Grist:
+        href: https://{{HOMEPAGE_VAR_MAIN_SUBDOMAIN}}.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}:8484/
+        description: Collaborative data organization tool
+    - QDirStat:
+        href: https://{{HOMEPAGE_VAR_MAIN_SUBDOMAIN}}.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}:7815/
+        description: Disk usage analysis tool
+
+- Backups:
+    - UptimeKuma:
+        href: https://sup.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: Self-hosted monitoring tool
+
+- Networking:
+    - Speedtest Tracker:
+        href: https://{{HOMEPAGE_VAR_MAIN_SUBDOMAIN}}.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}:83/
+        description: Track and analyze internet speed over time
+
+- Downloads:
+    - qBittorrent:
+        href: https://qbit.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: Torrent client for downloading and managing torrents
+    - YouTube-DL:
+        href: https://ytdl.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}/
+        description: Download videos and audio from YouTube and other platforms
+
+- AI and Analysis:
+    - Immich:
+        href: https://{{HOMEPAGE_VAR_MAIN_SUBDOMAIN}}.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}:2283/
+        description: AI-powered photo storage and search
+    - Diskover:
+        href: https://{{HOMEPAGE_VAR_MAIN_SUBDOMAIN}}.{{HOMEPAGE_VAR_MAIN_TAILSCALE_DOMAIN}}:82/
+        description: File system data exploration and analysis tool

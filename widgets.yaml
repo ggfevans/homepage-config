@@ -1,0 +1,36 @@
+---
+
+- resources:
+    cpu: true
+    memory: true
+    network: true
+    disk: /
+
+- search:
+    provider: duckduckgo
+    target: _blank
+    focus: true
+    showSearchSuggestions: true
+
+- tailscale:
+    apiKey: {{TAILSCALE_API_KEY}}
+    device: {{TAILSCALE_DEVICE_ID}}
+
+- weather:
+    provider: weatherapi
+    apiKey: {{WEATHERAPI_KEY}}
+    lat: {{WEATHER_LATITUDE}}
+    lon: {{WEATHER_LONGITUDE}}
+    units: metric
+    label: Local Weather
+    language: en
+
+- datetime:
+    format: "dddd, MMMM Do YYYY"
+    dateStyle: long
+    timeStyle: short
+    hour12: false
+    
+- greeting:
+    text: "Welcome to gHome!"
+    greet: true

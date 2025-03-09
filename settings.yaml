@@ -1,0 +1,71 @@
+---
+# Homepage Configuration
+title: gHome
+subtitle: "My Self-Hosted Dashboard"
+
+# Theme Customization
+theme: dark
+color: slate
+fontSize: medium
+cardBlur: lg
+headerStyle: boxed
+iconStyle: theme
+
+# Provider Configuration
+providers:
+  weatherapi:
+    apiKey: {{WEATHERAPI_KEY}}
+  tailscale:
+    apiKey: {{TAILSCALE_API_KEY}}
+    device: {{TAILSCALE_DEVICE_ID}}
+
+# Layout Settings
+layout:
+  Media:
+    style: row
+    columns: 3
+
+# Search Settings
+searchProvider: duckduckgo
+searchTarget: _blank
+
+# Weather Settings
+weather:
+  latitude: {{WEATHER_LATITUDE}}
+  longitude: {{WEATHER_LONGITUDE}}
+  units: metric
+  timeFormat: 24h
+
+# Docker Configuration
+docker:
+  enabled: true
+  socket: /var/run/docker.sock
+  showSystem: true
+  groups:
+    - name: Media
+      expanded: true
+    - name: System
+      expanded: false
+
+# Widget Configuration
+widgets:
+  - resources:
+      cpu: true
+      memory: true
+      disk: /
+      network: true
+  - search
+  - weather
+  - datetime
+  - greeting
+
+# System Settings
+showStats: true
+hideVersion: true
+statusCheck:
+  interval: 300
+
+# Logging
+log:
+  level: debug
+  path: /config/logs/homepage.log

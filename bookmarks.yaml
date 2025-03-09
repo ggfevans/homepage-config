@@ -1,0 +1,8 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/bookmarks
+
+- Personal links:
+    - Github:
+        - abbr: GH
+          href: https://github.com/{{HOMEPAGE_VAR_MAIN_GITHUB_USERNAME}}
